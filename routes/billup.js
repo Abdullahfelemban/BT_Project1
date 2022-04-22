@@ -55,7 +55,7 @@ router.post('/billup',isAuthenticated, upload.fields([{
  
 
   } else{
-    upImg1= req.files.logoimg[0].path;
+    upImg1= 'businesstools.online/'+req.files.logoimg[0].path;
     
    
   }
@@ -114,7 +114,7 @@ var h = `<center> <p style="color:green;">  تم حفظ تصميمك بنجاح 
   <center>
  
   
-    <div > <a href="${req.body.logolink}" ><img src="/${upImg1}" width="200px"  ></a> </div> 
+    <div > <a href="${req.body.logolink}" ><img src="${upImg1}" width="200px"  ></a> </div> 
   
     
   
@@ -139,7 +139,7 @@ var h = `<center> <p style="color:green;">  تم حفظ تصميمك بنجاح 
             sum+= req.body.number[0]*find[0].price; 
             response+=  ` <tr>
             <th scope="row">${1}</th>
-            <td><img src="/${find[0].img}" width="80px"  ></td>
+            <td><img src="${find[0].img}" width="80px"  ></td>
             <td>${req.body.number[0]} </td>
             
             <td>${find[0].price}</td>
@@ -159,7 +159,7 @@ for(i=0;i<find.length;i++) {
     
     response+=  ` <tr>
     <th scope="row">${i+1}</th>
-    <td><img src="/${find[i].img}" width="80px"  ></td>
+    <td><img src="${find[i].img}" width="80px"  ></td>
     <td>${req.body.number[i]} </td>
     
     <td>${find[i].price}</td>
@@ -203,7 +203,7 @@ response+=  `
 
  
 var icon =  ` <center>
-    <div > <a  ><img src="/${upImg1}" width="100px"  ></a> </div> 
+    <div > <a  ><img src="${upImg1}" width="100px"  ></a> </div> 
   
     
     <table class="table caption-top" style="width: 100px;font-size:10px" dir="rtl">
@@ -226,7 +226,7 @@ var sum=0;
         sum+= req.body.number[0]*find[0].price;
         icon+=  ` <tr>
         <th scope="row">${1}</th>
-        <td><img src="/${find[0].img}" width="40px"  /></td>
+        <td><img src="${find[0].img}" width="40px"  /></td>
         <td>${req.body.number[0]} </td>
         
         <td>${find[0].price}</td>
@@ -246,7 +246,7 @@ for(i=0;i<find.length;i++) {
 
     icon+=  ` <tr>
 <th scope="row">${i+1}</th>
-<td><img src="/${find[i].img}" width="40px"  /></td>
+<td><img src="${find[i].img}" width="40px"  /></td>
 <td>${req.body.number[i]} </td>
 
 <td>${find[i].price}</td>
@@ -360,7 +360,7 @@ router.post('/billup2',isAuthenticated,  upload.fields([{
  
 
   } else{
-    upImg1= req.files.logoimg[0].path;
+    upImg1= 'businesstools.online/'+req.files.logoimg[0].path;
     
    
   }
@@ -418,7 +418,7 @@ router.post('/billup2',isAuthenticated,  upload.fields([{
       <center>
      
       
-        <div > <a href="${req.body.logolink}" ><img src="/${upImg1}" width="200px"  ></a> </div> 
+        <div > <a href="${req.body.logolink}" ><img src="${upImg1}" width="200px"  ></a> </div> 
       
         
       
@@ -442,7 +442,7 @@ router.post('/billup2',isAuthenticated,  upload.fields([{
                 sum+= req.body.number[0]*find[0].price; 
                 response+=  ` <tr>
                 <th scope="row">${1}</th>
-                <td><img src="/${find[0].img}" width="80px"  ></td>
+                <td><img src="${find[0].img}" width="80px"  ></td>
                 <td>${req.body.number[0]} </td>
                 
                 <td>${find[0].price}</td>
@@ -462,7 +462,7 @@ router.post('/billup2',isAuthenticated,  upload.fields([{
         
         response+=  ` <tr>
         <th scope="row">${i+1}</th>
-        <td><img src="/${find[i].img}" width="80px"  ></td>
+        <td><img src="${find[i].img}" width="80px"  ></td>
         <td>${req.body.number[i]} </td>
         
         <td>${find[i].price}</td>
@@ -506,7 +506,7 @@ router.post('/billup2',isAuthenticated,  upload.fields([{
     
      
     var icon =  ` <center>
-        <div > <a  ><img src="/${upImg1}" width="100px"  ></a> </div> 
+        <div > <a  ><img src="${upImg1}" width="100px"  ></a> </div> 
       
         
         <table class="table caption-top" style="width: 100px;font-size:10px" dir="rtl">
@@ -529,7 +529,7 @@ router.post('/billup2',isAuthenticated,  upload.fields([{
             sum+= req.body.number[0]*find[0].price;
             icon+=  ` <tr>
             <th scope="row">${1}</th>
-            <td><img src="/${find[0].img}" width="40px"  /></td>
+            <td><img src="${find[0].img}" width="40px"  /></td>
             <td>${req.body.number[0]} </td>
             
             <td>${find[0].price}</td>
@@ -548,7 +548,7 @@ router.post('/billup2',isAuthenticated,  upload.fields([{
 
         icon+=  ` <tr>
     <th scope="row">${i+1}</th>
-    <td><img src="/${find[i].img}" width="40px"  /></td>
+    <td><img src="${find[i].img}" width="40px"  /></td>
     <td>${req.body.number[i]} </td>
     
     <td>${find[i].price}</td>
