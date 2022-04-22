@@ -1,0 +1,129 @@
+<%- include('../parts/header.ejs') -%>
+<%- include('../parts/navbar.ejs') -%>
+<center>
+
+
+
+
+<div id="border" dir="rtl" > 
+
+    <form method="POST" action="/bill/billup2" enctype="multipart/form-data">
+      <div  class="edit">
+        <label style=" cursor:pointer;">
+            <img src="/<%= logoimg %>" width="50%">
+            <input type="file" name="logoimg" style="display:none"  >
+          </label>
+        
+          </div>
+          <br><br>
+          <h5>اضافة منتجات</h5>
+          <br><br>
+          <div>
+          <div   id="productoption" > </div>
+        
+          <h1  > <a onclick="addproduct()" > <i class="bi bi-plus-circle"></i>  </a></h1>
+        </div>
+        
+        <br><br>
+        
+        <h5>رابط الشعار</h5>
+        
+        <span class="input-group mb-3" >
+            <span class="input-group-text">الرابط</span>
+            <input  placeholder="https://example.com" type="text" value="<%= logolink %>" class="form-control" name="logolink"  >
+            <span>
+        
+        
+        
+        
+        <div dir="rtl"  >
+            <h5>روابط التواصل الاجتماعي</h5>
+             
+           
+               <div id="container2"></div>
+        <h1 id="add2" > <a onclick="add()" > <i class="bi bi-plus-circle"></i>  </a></h1>
+        
+        
+        <div>
+            <span class="input-group mb-3" >
+                <span class="input-group-text">اسم الشركة</span>
+                <input type="text" value="<%= namec %>" class="form-control" name="namec"   >
+                <span>
+        <br>
+             <span class="input-group mb-3" >
+                  <span class="input-group-text">عنوان الشركة</span>
+                  <input type="text" value="<%= address %>" class="form-control" name="address"  >
+                  <span>
+          <br>
+          <span class="input-group mb-3" >
+            <span class="input-group-text">رابط التواصل</span>
+            <input type="text" class="form-control" value="<%= contact %>" name="contact"  placeholder="https://example.com" >
+            <span>
+                
+                </div>
+        
+                <div>
+                    
+                   <label for="exampleColorInput" class="form-label">لون الثيمات </label>
+                    <input type="color" name="themcolor" class="form-control form-control-color" id="exampleColorInput"value="<%= themcolor %>"  title="Choose your color"> 
+                <br>
+                        <label for="exampleColorInput" class="form-label">لون الخط </label>
+                        <input type="color" name="fontcolor" class="form-control form-control-color" id="exampleColorInput" value="<%= fontcolor %>"  title="Choose your color">
+                    
+                </div><br>
+                
+                <button type="submit" class="btn btn-success btn-lg"> حفظ  </button>
+        
+            </form>
+        <br>
+        <br>
+        </div>
+        </center>
+        
+        
+        <script>
+        
+        var p=0;
+        function addproduct(){
+        
+         
+        axios.get('/product/icons')
+        
+            .then((responseArr ) => {
+              
+              let product = responseArr.data
+            
+              
+              const container3 = document.getElementById('productoption');
+              
+             
+              var content3="";
+            
+        
+        
+        
+        
+        
+        content3+= `<span> المنتج : ${p+1}</span> <span> الكمية <input type="text"  style="width: 50px;"  name="number"  />  </span>  <select name="product" > `
+            product.forEach((product1)=> {
+        
+           
+            
+                
+                content3+= ` <option  value="${product1.number}"> ${product1.number} </option>  `;
+              
+              
+              })
+              
+              content3+=  ` </select> <br> `
+        
+              p++;
+                container3.innerHTML += content3;
+        
+        })
+        
+        
+        }
+            
+        </script>
+<%- include('../parts/footer.ejs') -%>

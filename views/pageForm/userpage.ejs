@@ -1,0 +1,35 @@
+
+<%- include('../parts/header.ejs') -%>
+<%- include('../parts/navbar.ejs') -%>
+
+
+<center>
+    
+
+  <h3 style="color: green;margin-top: 50px;" >تم انشاء صفحتك بنجاح على الرابط</h3>  
+   <h3 id="page5">     </h3>
+
+</center>
+
+
+<script>
+
+
+    const container1= document.getElementById('page5');
+        var page = window.localStorage.getItem('userpage');
+       
+        console.log(page)
+    
+    
+      
+       container1.innerHTML=   '<a  href="'+page+'">  '+page+'  </a>';
+       
+       
+       
+       
+       
+       
+       </script>
+    
+
+<%- include('../parts/footer.ejs') -%>

@@ -1,0 +1,60 @@
+<%- include('../parts/header.ejs') -%>
+<%- include('../parts/navbar.ejs') -%>
+
+
+<center>
+    <form style="margin-top: 40px;"  dir="rtl" method="POST">
+    
+        <h2>اضافة تصنيف جديد</h2><br>
+        <div style="width: 400px;" class="mb-3">
+           
+            <input type="text" class="form-control" name="filter" required placeholder="اسم التصنيف">
+        </div>
+
+        </div>
+        <button type="submit" class="btn btn-primary">حفظ</button>
+    </form>
+
+<br>
+
+
+<table class="table" style="width: 300px; text-align: right;">
+    <thead >
+        <tr>
+            
+            <th>التصنيف</th>
+           
+          
+        </tr>
+
+    </thead>
+  
+    <tr>
+            
+    <th>
+        <div id="filter"></div>
+    </th> 
+    </tr> 
+
+</table>
+       
+
+
+    </center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include('../parts/footer.ejs') -%>

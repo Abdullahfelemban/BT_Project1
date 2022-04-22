@@ -1,0 +1,47 @@
+
+<%- include('../parts/header.ejs') -%>
+<%- include('../parts/navbar.ejs') -%>
+
+
+
+<center>
+
+<div id="border" dir="rtl" > 
+
+
+    <img src="https://chart.googleapis.com/chart?cht=qr&chl=Business+Tools&chs=400x400&chld=L|0"	class="qr-code img-thumbnail img-responsive" />
+
+
+    <form method="POST" action="/QRcode/QRuploads" enctype="multipart/form-data">
+<div  class="img">
+<label style=" cursor:pointer;position: absolute;top: 280px;left: 920px;">
+    <img src="/imgs/logoEdit.png" width="80px">
+    <input  type="file" name="logoimg" style="display:none"  >
+  </label>
+
+  </div> <br>
+
+  <span class="input-group mb-3" >
+    <span class="input-group-text">الرابط</span>
+    <input type="text" class="form-control" name="link"  >
+</span><br>
+
+	
+	
+<button type="submit"  class="btn btn-success btn-lg"> حفظ  </button> 
+
+</form><br>
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include('../parts/footer.ejs') -%>

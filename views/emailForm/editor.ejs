@@ -1,0 +1,94 @@
+<%- include('../parts/header.ejs') -%>
+<%- include('../parts/navbar.ejs') -%>
+<center>
+
+
+<div id="border" dir="rtl" > 
+
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+<div  class="edit">
+<label style=" cursor:pointer;">
+    <img src="/imgs/logoEdit.png" width="50%">
+    <input type="file" name="logoimg" style="display:none"  >
+  </label>
+
+  </div>
+
+  <div class="edit">
+  <label style="cursor:pointer;">
+    <img src="/imgs/AdEmail.png" width="100%" >
+    <input type="file" name="adsimg" style="display:none" >
+  </label>
+
+
+</div>
+
+<h5>رابط الشعار</h5>
+
+<span class="input-group mb-3" >
+    <span class="input-group-text">الرابط</span>
+    <input  placeholder="https://example.com" type="text" class="form-control" name="logolink"  >
+    <span>
+
+<div style="margin-bottom: 20px ;">
+    <h5>رابط زر الاجراء</h5>
+    <span class="input-group mb-3" >
+        <span class="input-group-text">الرابط</span>
+        <input placeholder="https://example.com" type="text" class="form-control" name="buttonlink"  >
+        <span>
+
+<select name="actionbutton" class="form-select" id="form1"  aria-label="Default select example">
+    <option selected>اختر زر الاجراء</option>
+    <option value="تسوق الان">تسوق الان</option>
+    <option value="اعرف المزيد">اعرف المزيد</option>
+    <option value="اتصل بنا">اتصل بنا</option>
+    <option value="احجز الان">احجز الان</option>
+  </select>
+</div>
+
+
+
+<div dir="rtl"  >
+    <h5>روابط التواصل الاجتماعي</h5>
+      
+   
+       <div id="container2"></div>
+<h1 id="add2" > <a onclick="add()" > <i class="bi bi-plus-circle"></i>  </a></h1>
+
+
+<div>
+    <span class="input-group mb-3" >
+        <span class="input-group-text">اسم الشركة</span>
+        <input type="text" class="form-control" name="namec"   >
+        <span>
+<br>
+     <span class="input-group mb-3" >
+          <span class="input-group-text">عنوان الشركة</span>
+          <input type="text" class="form-control" name="address"  >
+          <span>
+  <br>
+  <span class="input-group mb-3" >
+    <span class="input-group-text">رابط التواصل</span>
+    <input type="text" class="form-control" name="contact" placeholder="https://example.com" >
+    <span>
+        
+        </div>
+
+        <div>
+            
+           <label for="exampleColorInput" class="form-label">لون الثيمات </label>
+            <input type="color" name="themcolor" class="form-control form-control-color" id="exampleColorInput" value="#484FA7" title="Choose your color"> 
+        <br>
+                <label for="exampleColorInput" class="form-label">لون الخط </label>
+                <input type="color" name="fontcolor" class="form-control form-control-color" id="exampleColorInput" value="#CCCEE6" title="Choose your color">
+            
+        </div><br>
+        
+        <button type="submit" class="btn btn-success btn-lg"> حفظ  </button>
+
+    </form>
+<br>
+<br>
+</div>
+</center>
+<%- include('../parts/footer.ejs') -%>

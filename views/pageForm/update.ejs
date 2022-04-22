@@ -1,0 +1,66 @@
+<%- include('../parts/header.ejs') -%>
+<%- include('../parts/navbar.ejs') -%>
+<center>
+
+
+
+
+<div id="border" dir="rtl" > 
+
+    <form method="POST" action="/pageForm/linkuploads2" enctype="multipart/form-data">
+<div  class="img">
+<label style=" cursor:pointer;">
+    <img src="/<%= logoimg %>" width="40%">
+    <input  type="file" name="logoimg" style="display:none"  >
+  </label>
+
+  </div> <br>
+
+ 
+
+
+
+<h5>معلومات الصفحة</h5>
+
+<span class="input-group mb-3" >
+    <span class="input-group-text">وصف الصفحة</span>
+    <input type="text" value="<%= dis %>" class="form-control" name="dis"  >
+</span><br>
+<span class="input-group mb-3" >
+    <span class="input-group-text">عنوان رابط الصفحة</span>
+    <input type="text" value="<%= name %>"  class="form-control" name="name"  >
+</span><br>
+<h5>تعديل الروابط</h5>
+
+
+
+
+
+   
+       <div id="container2" ></div>
+
+
+
+
+<br>
+<div>
+            
+    <label for="exampleColorInput" class="form-label">لون الثيمات </label>
+     <input type="color" name="themcolor" class="form-control form-control-color" id="exampleColorInput" value="<%= themcolor %>" title="Choose your color"> 
+ <br>
+         <label for="exampleColorInput" class="form-label">لون الخط </label>
+         <input type="color" name="fontcolor" class="form-control form-control-color" id="exampleColorInput" value="<%= fontcolor %>" title="Choose your color">
+     
+         <br>
+         <label for="exampleColorInput" class="form-label">لون الخلفية </label>
+         <input type="color" name="backcolor" class="form-control form-control-color" id="exampleColorInput" value="<%= backcolor %>" title="Choose your color">
+     
+
+
+ </div><br>
+</div>
+<button type="submit" class="btn btn-success btn-lg"> حفظ  </button>
+
+</form>
+</center>
+<%- include('../parts/footer.ejs') -%>

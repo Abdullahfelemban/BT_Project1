@@ -1,0 +1,83 @@
+<%- include('../parts/header.ejs') -%>
+<%- include('../parts/navbar.ejs') -%>
+<center>
+
+
+
+
+<div id="border" dir="rtl" > 
+
+    <form method="POST" action="/pageForm/linkuploads" enctype="multipart/form-data">
+<div  class="img">
+<label style=" cursor:pointer;">
+    <img src="/imgs/logoEdit.png" width="40%">
+    <input  type="file" name="logoimg" style="display:none"  >
+  </label>
+
+  </div> <br>
+
+ 
+
+
+
+<h5>معلومات الصفحة</h5>
+
+<span class="input-group mb-3" >
+    <span class="input-group-text">وصف الصفحة</span>
+    <input type="text" class="form-control" name="dis"  >
+</span><br>
+<span class="input-group mb-3" >
+    <span class="input-group-text">عنوان رابط الصفحة</span>
+    <input type="text" class="form-control" name="name"  >
+</span><br>
+<h5>اضافة روابط</h5>
+<div style="margin-bottom: 20px ;padding-top: 20px; border:1px solid black; width:80%;">
+   
+    <span class="input-group mb-3" >
+        <span class="input-group-text">عنوان الرابط</span>
+        <input  type="text" class="form-control" name="linkadd"  >
+    </span>
+
+    <span class="input-group mb-3" >
+        <span class="input-group-text">الرابط</span>
+        <input placeholder="https://example.com" type="text"  class="form-control" name="link"  >
+    </span>
+
+    <span class="input-group mb-1" >
+        <label style=" cursor:pointer;">
+            <i title="اضافة ايقونة" class="bi bi-image" style="font-size:30px ;" ></i>  <input width="100px" type="file" name="img" style="display:none"></label>
+</span>
+
+</div>
+
+
+
+
+   
+       <div id="container" ></div>
+<h1 id="add2" > <a onclick="addlink()" > <i class="bi bi-plus-circle"></i>  </a></h1>
+
+
+
+<br>
+<div>
+            
+    <label for="exampleColorInput" class="form-label">لون الثيمات </label>
+     <input type="color" name="themcolor" class="form-control form-control-color" id="exampleColorInput" value="#CCCEE6" title="Choose your color"> 
+ <br>
+         <label for="exampleColorInput" class="form-label">لون الخط </label>
+         <input type="color" name="fontcolor" class="form-control form-control-color" id="exampleColorInput" value="#484FA7" title="Choose your color">
+     
+         <br>
+         <label for="exampleColorInput" class="form-label">لون الخلفية </label>
+         <input type="color" name="backcolor" class="form-control form-control-color" id="exampleColorInput" value="#FFFFFF" title="Choose your color">
+     
+
+
+ </div><br>
+</div>
+<button type="submit" class="btn btn-success btn-lg"> حفظ  </button>
+
+</form>
+</center>
+<%- include('../parts/footer.ejs') -%>

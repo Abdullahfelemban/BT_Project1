@@ -1,0 +1,137 @@
+<%- include('../parts/header.ejs') -%>
+<%- include('../parts/navbar.ejs') -%>
+<style>
+
+
+    
+
+    label {
+    display: inline-block;
+    width: 180px;
+  
+    
+  }
+
+  
+</style>
+
+
+
+<div class="container" dir="rtl">
+        
+  <div class="row" >
+      <div class="col" style="margin-top: 60px;">
+          <div class="card border-0" style="width: 18rem;box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.13) ;border-radius: 10%;">
+
+          <h2>الباقة المجانية</h2>
+          <div class="row" style="margin-top: 30px;">
+              <div class="col" > <h6>اضافة منتجات:</h6></div>
+              <div class="col" style="text-align: right;">20 منتج <i class="bi bi-check-lg" style="color: green;"></i></div>
+              <div class="w-100"></div>
+              <div class="col" > <h6>اضافة عملاء:</h6></div>
+              <div class="col" style="text-align: right;">100 عميل <i class="bi bi-check-lg" style="color: green;"></i></div>
+              <div class="w-100"></div>
+              <div class="col" > <h6>تصميم بريد دعائي :</h6></div>
+              <div class="col" style="text-align: right;">4 تصاميم <i class="bi bi-check-lg" style="color: green;"></i></div>
+              <div class="w-100"></div>
+              <div class="col" > <h6>تصميم صفحة تعريفية :</h6></div>
+              <div class="col" style="text-align: right;">4 تصاميم <i class="bi bi-check-lg" style="color: green;"></i></div>
+              <div class="w-100"></div>
+              <div class="col" > <h6>تصميم QRcode  :</h6></div>
+              <div class="col" style="text-align: right;">4 تصاميم <i class="bi bi-check-lg" style="color: green;"></i></div>
+              <div class="w-100"></div>
+              <div class="col" > <h6>حساب عدد المشاهدات :</h6></div>
+              <div class="col" style="text-align: right;">نعم <i class="bi bi-check-lg" style="color: green;"></i></div>
+            </div>
+         
+
+            <h3 style="color: green;">السعر : مجانا</h3><br>
+          
+       
+         
+       </div>
+      
+      </div>
+
+ 
+
+
+      <div class="col" style="margin-top: 60px;">
+          <div class="card border-0" style="width: 18rem;box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.13) ;border-radius: 10%;">
+              <h2>الباقة المميزة</h2>
+              <div class="row" style="margin-top: 30px;">
+                  <div class="col" > <h6>اضافة منتجات:</h6></div>
+                  <div class="col" style="text-align: right;">لا محدود <i class="bi bi-check2-all" style="color: green;"></i></div>
+                  <div class="w-100"></div>
+                  <div class="col" > <h6>اضافة عملاء:</h6></div>
+                  <div class="col" style="text-align: right;">لا محدود <i class="bi bi-check2-all" style="color: green;"></i></div>
+                  <div class="w-100"></div>
+                  <div class="col" > <h6>تصميم بريد دعائي :</h6></div>
+                  <div class="col" style="text-align: right;">لا محدود<i class="bi bi-check2-all" style="color: green;"></i></div>
+                  <div class="w-100"></div>
+                  <div class="col" > <h6>تصميم صفحة تعريفية :</h6></div>
+                  <div class="col" style="text-align: right;">لا محدود<i class="bi bi-check2-all" style="color: green;"></i></div>
+                  <div class="w-100"></div>
+                  <div class="col" > <h6>تصميم QRcode  :</h6></div>
+                  <div class="col" style="text-align: right;">لا محدود <i class="bi bi-check2-all" style="color: green;"></i></div>
+                  <div class="w-100"></div>
+                  <div class="col" > <h6>حساب عدد المشاهدات :</h6></div>
+                  <div class="col" style="text-align: right;">نعم <i class="bi bi-check-lg" style="color: green;"></i></div>
+                </div>
+                <h3 style="color: green;">السعر : 20 ريال شهري</h3><br>
+               
+          </div>
+
+        
+    </div>  
+
+
+      </div>
+  
+  </div>
+
+
+  <div class="body_m"  dir="rtl" style="margin-right: 30px;margin-top: 20px;">
+
+    <h2>الباقة</h2>
+    <form action="/user/coupon" method="post"  >
+    <label> الباقة الحالية: <%= grade %> </label><br><br>
+  <div>  <% if(message) {%><p style="color: green;font-size: 16px;text-align: right;"><%= message %></p>  <%}%>
+        <% if(message1) {%><p style="color: red;font-size: 16px;text-align: right;"><%= message1 %></p>  <%}%> </div><br>
+    <label > لترقية الباقة ادخل الكوبون: </label>  <input type="text" name="coupon" >  <input type="submit" value="ادخل" id="MPI"  style="margin-right: 50px;" >  <br/> 
+    <small >*تواصل مع الدعم للحصول على الكوبون </small> <br><br>
+  </form>
+
+    <form action="/user/manage" method="post"  >
+
+     <h2>حسابك</h2>
+     <div> <label for="name"> الاسم كامل:  </label> <input type="text" name="fullname" id="fullname" value="<%= fullname %>" required > </div> <br/> 
+     <div> <label for="username"> اسم المستخدم: </label>  <input type="text" name="username" id="username" readonly value="<%= username %>"  > </div><br/> 
+     <div> <label for="Pass"> كلمة السر: </label>  <input type="password" name="password" id="password"  placeholder="*****"> </div><br> 
+     <div> <label for="copass"> كلمة السر الجديدة: </label>  <input type="password" name="password2" required id="password2"  placeholder="*****"> </div><br/> 
+     <br> 
+     <br> 
+     <div>  <input type="submit" value="تحديث" id="MPI"  style="margin-right: 250px;" > </div> <br/> 
+</form>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include('../parts/footer.ejs') -%>

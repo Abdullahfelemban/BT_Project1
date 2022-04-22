@@ -1,0 +1,31 @@
+
+<%- include('../parts/header.ejs') -%>
+
+
+<body id="login" dir="rtl">
+
+  
+  
+    <main id="main-holder">
+      
+      <div class="imgcontainer">
+        <img src="/imgs/logo copy.png" alt="logo" class="logo">
+      </div>
+      
+      <% if (locals.error && error !="") {%>
+  
+      <div style="color: #8a0000;border: #8a0000 solid 1px;background-color: #e58f8f;font-weight: bold;">
+          <%=error%>
+      </div>
+      <%}%>
+      <form id="login-form" action="/user/signup" method="post">
+  
+        <input type="text" name="fullname" id="fullname" class="login-form-field" placeholder="الاسم">
+        <input type="text" name="username" id="username" class="login-form-field" placeholder="اسم المستخدم">
+        <input type="password" name="password" id="password" class="login-form-field" placeholder="كلمة السر">
+        <input type="password" name="password2" id="password2" class="login-form-field" placeholder="تاكيد كلمة السر">
+        <input type="submit" value="التسجيل" id="login-form-submit"><br/> <a href="/user/login"> لتسجيل الدخول  </a>
+      </form>
+    
+    </main>
+  </body>

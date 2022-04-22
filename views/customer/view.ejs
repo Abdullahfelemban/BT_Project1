@@ -1,0 +1,46 @@
+<%- include('../parts/header.ejs') -%>
+<%- include('../parts/navbar.ejs') -%>
+
+<br>
+<% if(message1) {%><p style="color: red;font-size: 16px;text-align: center;"><%= message1 %></p>  <%}%><br/>
+
+
+<main dir="rtl" style="margin-top: 40px;" >
+  <div class="container">
+      <div class="box-nav d-flex justify-between" style="width: 700px;height: 35px;">
+          <a href="/customer/add" >
+              <button style="width: 115px;margin: 5px;" class="btn btn-light"> اضافة عميل <i class="bi bi-person-plus-fill"></i></button>
+          </a>
+
+          <a href="/customer/filter" >
+            <button style="width: 115px;margin: 5px;" class="btn btn-light"> اضافة تصنيف <i class="bi bi-funnel"></i></button>
+        </a>
+
+      </div>
+
+     
+      
+         
+              
+           
+                
+
+                    <div id="customer"></div>
+                   
+                  
+               
+                
+         
+     
+  </div>
+</main>
+
+
+
+
+
+
+
+
+
+<%- include('../parts/footer.ejs') -%>

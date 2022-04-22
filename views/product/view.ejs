@@ -1,0 +1,64 @@
+<%- include('../parts/header.ejs') -%>
+<%- include('../parts/navbar.ejs') -%>
+
+
+<script> 
+
+function delete_click(clicked_id)
+    {
+
+        axios.delete('/product/delete1/'+clicked_id);
+
+        axios.delete('/product/delete/'+clicked_id)
+        .then((res)=>{
+
+     
+      alert('تم حذف تصميمك بنجاح')
+      window.location.href = '/product/view'
+   })
+
+    .catch((err)=>{
+
+
+      console.log(err)
+    })
+    }
+    
+    function update_click(clicked_id)
+    {
+
+        
+        axios.post('/product/update/'+clicked_id)
+        .then((res)=>{
+
+     
+     
+      window.location.href = '/product/update'
+   })
+
+    .catch((err)=>{
+
+
+      console.log(err)
+    })
+    }
+    
+    </script>
+
+<br>
+<% if(message1) {%><p style="color: red;font-size: 16px;text-align: center;"><%= message1 %></p>  <%}%><br/>
+
+<div id="product" dir="rtl" style="margin-right: 15%;">
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+<%- include('../parts/footer.ejs') -%>

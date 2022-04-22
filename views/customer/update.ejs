@@ -1,0 +1,44 @@
+<%- include('../parts/header.ejs') -%>
+<%- include('../parts/navbar.ejs') -%>
+
+
+
+
+<center>
+    <br>
+
+    <div>  <% if(message) {%><p style="color: green;font-size: 16px;text-align: center;"><%= message %></p>  <%}%>
+        <% if(message1) {%><p style="color: red;font-size: 16px;text-align: center;"><%= message1 %></p>  <%}%><br>
+
+<form style="margin-top: 40px;"  dir="rtl" method="POST">
+
+    <h2>تعديل بيانات العميل</h2>
+    <div style="width: 400px;" class="mb-3">
+        <label class="form-label" >الاسم</label>
+        <input type="text" class="form-control" value="<%=name %>"  name="Cname" required placeholder="اسم العميل">
+    </div>
+    <div style="width: 400px;" class="mb-3">
+        <label class="form-label" >البريد الالكتروني</label>
+        <input type="text" class="form-control" value="<%=email %>" name="Cemail" required placeholder="البريد الالكتروني">
+    </div>
+
+    <div style="width: 400px;" class="mb-3">
+        <label class="form-label" >التصنيف</label>
+        
+        
+           
+       
+
+            <div id="selectFilter"></div>
+            
+    
+        
+    </div>
+   
+    <button type="submit"  class="btn btn-primary">حفظ</button>
+</form>
+</center>
+
+
+<%- include('../parts/footer.ejs') -%>
+

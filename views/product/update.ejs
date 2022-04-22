@@ -1,0 +1,59 @@
+<%- include('../parts/header.ejs') -%>
+<%- include('../parts/navbar.ejs') -%>
+
+
+
+
+<center>
+
+    <br>
+    <div>  <% if(message) {%><p style="color: green;font-size: 16px;text-align: center;"><%= message %></p>  <%}%>
+        <% if(message1) {%><p style="color: red;font-size: 16px;text-align: center;"><%= message1 %></p>  <%}%><br/><br/>
+
+
+    <div id="border" dir="rtl" > 
+    
+    
+        <form method="POST" action="/product/product_up2" enctype="multipart/form-data">
+    <div  class="img">
+        <label style=" cursor:pointer;">
+            <img src="/<%= img %>" width="40%">
+            <input  type="file" name="img" style="display:none"  >
+      </label>
+    
+      </div> 
+    
+      <span class="input-group mb-3" >
+        <span class="input-group-text">رقم المنتج</span>
+        <input type="text" value="<%= number %>" class="form-control" name="num"  >
+    </span>
+    
+    <span class="input-group mb-3" >
+        <span class="input-group-text">اسم المنتج</span>
+        <input type="text" value="<%= name %>" class="form-control" name="name"  >
+    </span>
+
+    <span class="input-group mb-3" >
+        <span class="input-group-text">سعر المنتج</span>
+        <input type="text" value="<%= price %>" class="form-control" name="price"  >
+    </span>
+        
+    <button type="submit"  class="btn btn-success btn-lg"> حفظ  </button> 
+    
+    </form><br>
+    </center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include('../parts/footer.ejs') -%>

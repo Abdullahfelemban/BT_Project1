@@ -1,0 +1,77 @@
+<%- include('../parts/header.ejs') -%>
+<%- include('../parts/navbar.ejs') -%>
+
+
+
+<center>
+    <br>
+    <div>  <% if(message) {%><p style="color: green;font-size: 16px;text-align: center;"><%= message %></p>  <%}%>
+        <% if(message1) {%><p style="color: red;font-size: 16px;text-align: center;"><%= message1 %></p>  <%}%><br/><br/>
+
+   
+<form method="POST" action="/bill/publish" dir="rtl">
+
+  
+    <h5>معلومات البريد الالكتروني المرسل منه</h5><br>
+<span class="input-group mb-3" >
+    <span class="input-group-text">الخدمة</span>
+    <input  placeholder="مثل: gmail,hotmail,outlook " type="text" class="form-control" name="ser"  >
+</span>
+<span class="input-group mb-3" >
+    <span class="input-group-text">البريد الالكتروني</span>
+    <input  placeholder="مثل example.gmail.com " type="text" class="form-control" name="em"  >
+</span>
+        <span class="input-group mb-3" >
+            <span class="input-group-text">الرقم السري</span>
+            <input   type="password" class="form-control" name="pass"  >
+        </span> 
+
+
+                <h5>معلومات الرسالة </h5><br>
+
+                <span class="input-group mb-3" >
+                    <span class="input-group-text">الى</span>
+                    <input  type="text" class="form-control" name="billto"  >
+
+                </span>
+                <span class="input-group mb-3" >
+                    <span class="input-group-text">عنوان الرسالة</span>
+                    <input  type="text" class="form-control" name="sub"  >
+                </span>
+                       
+                            
+                                <div style=" display: none;" id="mass"></div>
+                               
+                                <button type="submit" class="btn btn-success btn-lg"> نشر  </button>
+                           
+            </form>
+
+</center>
+
+
+
+<script>
+
+
+
+    var id =   window.localStorage.getItem('idbill');
+   
+   console.log(id);
+   
+   const container3 = document.getElementById('mass');
+   container3.innerHTML= `<input  type="text"  value="${id}"  class="form-control" name="ad"  >`;
+   
+   
+   
+   
+   
+   </script>
+
+
+
+
+
+
+
+
+<%- include('../parts/footer.ejs') -%>

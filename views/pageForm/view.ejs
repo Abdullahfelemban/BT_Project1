@@ -1,0 +1,68 @@
+<%- include('../parts/header.ejs') -%>
+<%- include('../parts/navbar.ejs') -%>
+
+
+<br>
+<% if(message1) {%><p style="color: red;font-size: 16px;text-align: center;"><%= message1 %></p>  <%}%><br/>
+
+<div id="pages" dir="rtl" style="margin-right: 15%;">
+  
+</div>
+
+
+
+<script> 
+
+  function delete_click(clicked_id)
+      {
+  
+          axios.delete('/pageForm/delete1/'+clicked_id);
+  
+          axios.delete('/pageForm/delete/'+clicked_id)
+          .then((res)=>{
+  
+       
+        alert('تم حذف تصميمك بنجاح')
+        window.location.href = '/pageForm/view'
+     })
+  
+      .catch((err)=>{
+  
+  
+        console.log(err)
+      })
+      }
+      
+      function update_click(clicked_id)
+      {
+  
+          
+          axios.post('/linkuploads/update/'+clicked_id)
+          .then((res)=>{
+  
+       
+       
+        window.location.href = '/pageForm/update'
+     })
+  
+      .catch((err)=>{
+  
+  
+        console.log(err)
+      })
+      }
+      
+      
+      
+      
+      
+      
+      </script>
+
+
+
+
+
+
+
+<%- include('../parts/footer.ejs') -%>
