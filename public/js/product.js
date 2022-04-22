@@ -41,7 +41,7 @@ product.forEach((product1)=> {
           <div class="card-body">
     
          
-          <img src="/${product1.img}" width="200px"> 
+          <img src="${product1.img}" width="200px"> 
           
 
           <div style="text-align: right;position: absolute;bottom: 50px;margin-top: 50px ;" >
