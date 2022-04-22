@@ -127,7 +127,7 @@ app.get('/', (req,res)=> {
  app.use('/bill', bill3)
 
  
- app.listen(1600, ()=> {
+ app.listen(80, ()=> {
 
     console.log(' app is wokring on port 1600')
 })
