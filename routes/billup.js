@@ -55,7 +55,7 @@ router.post('/billup',isAuthenticated, upload.fields([{
  
 
   } else{
-    upImg1= 'businesstools.online/'+req.files.logoimg[0].path;
+    upImg1= 'http://businesstools.online/'+req.files.logoimg[0].path;
     
    
   }
@@ -360,7 +360,7 @@ router.post('/billup2',isAuthenticated,  upload.fields([{
  
 
   } else{
-    upImg1= 'businesstools.online/'+req.files.logoimg[0].path;
+    upImg1= 'http://businesstools.online/'+req.files.logoimg[0].path;
     
    
   }
