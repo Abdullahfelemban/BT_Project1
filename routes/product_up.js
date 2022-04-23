@@ -44,7 +44,7 @@ router.post('/product_up',isAuthenticated, upload.fields([{
  
 
   } else{
-    upImg1= 'businesstools.online/'+req.files.img[0].path;
+    upImg1= 'http://businesstools.online/'+req.files.img[0].path;
     
    
   }
@@ -141,7 +141,7 @@ router.post('/product_up2',isAuthenticated,  upload.fields([{
    
   
     } else{
-      upImg1= 'businesstools.online/'+req.files.img[0].path;
+      upImg1= 'http://businesstools.online/'+req.files.img[0].path;
       
      
     }
