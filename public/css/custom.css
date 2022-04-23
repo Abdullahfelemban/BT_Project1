@@ -349,7 +349,23 @@ text-align: center;
    -o-transform:rotate(-90deg);
    -webkit-transform:rotate(-90deg);
 }
+#img01{
 
+  width:600px;
+}
+
+#img02{
+ width: 600px;
+  
+}
+#img03{
+
+  width: 600px;
+}
+#img04{
+
+  width: 400px;
+}
 
 
 @media (max-width: 500px) {
@@ -374,7 +390,23 @@ text-align: center;
         width:100px;
     }
     
+ #img01{
 
+      width:300px;
+    }
+    #img02{
+      
+      width: 450px;
+      
+    }
+    #img03{
+
+      width: 450px;
+    }
+    #img04{
+
+      width: 300px;
+    }
 
  }
 
