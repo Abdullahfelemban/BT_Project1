@@ -6,6 +6,16 @@ const flash = require('connect-flash')
 const passport = require('passport')
 const passportsetup = require('./config/passport_setup')
 
+const Papa = require("papaparse");
+const fs = require("fs");
+const sorter = require("./utils/sort");
+const path = require("path");
+const http = require('http');
+const https = require('https');
+const file = fs.readFileSync(__dirname + "/res/final-sales.csv", "utf8");
+
+
+
 app.use(express.json());
 app.use(express.urlencoded());
 
@@ -42,7 +52,7 @@ app.set('view engine', 'ejs')
 
 
 
-
+if (process.env.NODE_ENV === "production") {
 app.get('/', (req,res)=> {
 
     res.redirect('/main_page/user')
@@ -125,9 +135,24 @@ app.get('/', (req,res)=> {
  const bill3 = require('./routes/billup')
 
  app.use('/bill', bill3)
+}
 
+
+if (process.env.NODE_ENV === "production") {
+    const privateKey = fs.readFileSync('/etc/letsencrypt/live/businesstools.online/privkey.pem', 'utf8');
+    const certificate = fs.readFileSync('/etc/letsencrypt/live/businesstools.online/cert.pem', 'utf8');
+    const ca = fs.readFileSync('/etc/letsencrypt/live/businesstools.online/chain.pem', 'utf8');
+    const credentials = {
+        key: privateKey,
+        cert: certificate,
+        ca: ca
+    };
+  
  
- app.listen(80, ()=> {
-
-    console.log(' app is wokring on port 1600')
-})
+ https.createServer(credentials, app).listen(443, () => {
+        console.log('HTTPS Server running on port 443');
+    });
+    http.createServer(function (req, res) {
+        res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+        res.end();
+    }).listen(80);
