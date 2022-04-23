@@ -54,7 +54,7 @@ router.post('/upload',isAuthenticated, upload.fields([{
  
 
   } else{
-    upImg1= 'http://businesstools.online/'+req.files.logoimg[0].path;
+    upImg1= req.files.logoimg[0].path;
     
    
   }
@@ -68,7 +68,7 @@ router.post('/upload',isAuthenticated, upload.fields([{
     }
   else{
    
-    upImg2= 'http://businesstools.online/'+req.files.adsimg[0].path;
+    upImg2= req.files.adsimg[0].path;
 
   }
 
@@ -120,11 +120,11 @@ var h = `<center> <p style="color:green;">  تم حفظ تصميمك بنجاح 
   <center>
  
   
-    <div > <a href="${req.body.logolink}" ><img src="${upImg1}" width="200px"  ></a> </div> 
+    <div > <a href="${req.body.logolink}" ><img src="${'http://businesstools.online/'+upImg1}" width="200px"  ></a> </div> 
   
     
   
-     <div> <img src="${upImg2}" width="50%" style="margin-top: 50px;" ></div>
+     <div> <img src="${'http://businesstools.online/'+upImg2}" width="50%" style="margin-top: 50px;" ></div>
   
      <div style="text-align: center; margin-top: 50px;" > <a href="${req.body.buttonlink}"> 
      
@@ -162,11 +162,11 @@ var h = `<center> <p style="color:green;">  تم حفظ تصميمك بنجاح 
 
  
 var icon =  ` <center>
-    <div > <a  ><img src="${upImg1}" width="100px"  ></a> </div> 
+    <div > <a  ><img src="/${upImg1}" width="100px"  ></a> </div> 
   
     
   
-     <div> <img src="${upImg2}" width="230px" style="margin-top: 5px;" ></div>
+     <div> <img src="/${upImg2}" width="230px" style="margin-top: 5px;" ></div>
   
      <div style="text-align: center; margin-top: 5px;" > 
      
@@ -263,7 +263,7 @@ name: 'adsimg', maxCount: 1
  
 
   } else{
-    upImg1= 'http://businesstools.online/'+req.files.logoimg[0].path;
+    upImg1= req.files.logoimg[0].path;
     
    
   }
@@ -277,7 +277,7 @@ name: 'adsimg', maxCount: 1
     }
   else{
    
-    upImg2= 'http://businesstools.online/'+req.files.adsimg[0].path;
+    upImg2= req.files.adsimg[0].path;
 
   }
 
@@ -328,11 +328,11 @@ name: 'adsimg', maxCount: 1
   <center>
  
    
-    <div > <a href="${req.body.logolink}" ><img src="${upImg1}" width="200px"  ></a> </div> 
+    <div > <a href="${req.body.logolink}" ><img src="${'http://businesstools.online/'+upImg1}" width="200px"  ></a> </div> 
   
     
   
-     <div> <img src="${upImg2}" width="50%" style="margin-top: 50px;" ></div>
+     <div> <img src="${'http://businesstools.online/'+upImg2}" width="50%" style="margin-top: 50px;" ></div>
   
      <div style="text-align: center; margin-top: 50px;" > <a href="${req.body.buttonlink}"> 
      
@@ -367,11 +367,11 @@ name: 'adsimg', maxCount: 1
  `
    
 var icon =  ` <center>
-    <div > <a  ><img src="${upImg1}" width="100px"  ></a> </div> 
+    <div > <a  ><img src="/${upImg1}" width="100px"  ></a> </div> 
   
     
   
-     <div> <img src="${upImg2}" width="230px" style="margin-top: 5px;" ></div>
+     <div> <img src="/${upImg2}" width="230px" style="margin-top: 5px;" ></div>
   
      <div style="text-align: center; margin-top: 5px;" > 
      
