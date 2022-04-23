@@ -40,11 +40,11 @@ router.post('/product_up',isAuthenticated, upload.fields([{
   if (typeof req.files.img === "undefined") {
 
    
-  upImg1 = "/uploads/noimg.png"
+  upImg1 = "http://businesstools.online/uploads/noimg.png"
  
 
   } else{
-    upImg1= req.files.img[0].path;
+    upImg1= 'http://businesstools.online/'+req.files.img[0].path;
     
    
   }
@@ -141,7 +141,7 @@ router.post('/product_up2',isAuthenticated,  upload.fields([{
    
   
     } else{
-      upImg1= req.files.img[0].path;
+      upImg1= 'http://businesstools.online/'+req.files.img[0].path;
       
      
     }
