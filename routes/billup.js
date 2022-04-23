@@ -51,7 +51,7 @@ router.post('/billup',isAuthenticated, upload.fields([{
   if (typeof req.files.logoimg === "undefined") {
 
    
-  upImg1 = "uploads/noimg.png"
+  upImg1 = "http://businesstools.online/uploads/noimg.png"
  
 
   } else{
