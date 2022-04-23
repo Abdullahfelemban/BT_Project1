@@ -54,7 +54,7 @@ router.post('/upload',isAuthenticated, upload.fields([{
  
 
   } else{
-    upImg1= 'businesstools.online/'+req.files.logoimg[0].path;
+    upImg1= 'http://businesstools.online/'+req.files.logoimg[0].path;
     
    
   }
@@ -68,7 +68,7 @@ router.post('/upload',isAuthenticated, upload.fields([{
     }
   else{
    
-    upImg2= 'businesstools.online/'+req.files.adsimg[0].path;
+    upImg2= 'http://businesstools.online/'+req.files.adsimg[0].path;
 
   }
 
@@ -263,7 +263,7 @@ name: 'adsimg', maxCount: 1
  
 
   } else{
-    upImg1= 'businesstools.online/'+req.files.logoimg[0].path;
+    upImg1= 'http://businesstools.online/'+req.files.logoimg[0].path;
     
    
   }
@@ -277,7 +277,7 @@ name: 'adsimg', maxCount: 1
     }
   else{
    
-    upImg2= 'businesstools.online/'+req.files.adsimg[0].path;
+    upImg2= 'http://businesstools.online/'+req.files.adsimg[0].path;
 
   }
 
