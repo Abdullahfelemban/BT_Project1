@@ -125,7 +125,10 @@ app.get('/', (req,res)=> {
  const bill3 = require('./routes/billup')
 
  app.use('/bill', bill3)
-
+https.createServer({
+  key: fs.readFileSync("/etc/letsencrypt/live/businesstools.online/privkey.pem"),
+  cert: fs.readFileSync("/etc/letsencrypt/live/businesstools.online/fullchain.pem")
+}, app).listen(443);
  
  app.listen(80, ()=> {
 
