@@ -6,6 +6,9 @@ const flash = require('connect-flash')
 const passport = require('passport')
 const passportsetup = require('./config/passport_setup')
 
+const http = require('http');
+const https = require('https');
+const fs = require('fs');
 app.use(express.json());
 app.use(express.urlencoded());
 
