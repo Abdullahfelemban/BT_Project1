@@ -4,7 +4,7 @@ function publish(id){
 
     
 
-    window.localStorage.setItem('userpage',' https://businesstools.online/pageForm/view/'+id);
+    window.localStorage.setItem('userpage',' https://businesstools.online/'+id);
     
     window.location.href="/emailForm/userpage"
   
