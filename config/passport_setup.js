@@ -114,12 +114,12 @@ passport.use( 'local.login_manger' , new localStrategy({
 
        
         if (err) {
-            return done(null, false, req.flash('error', 'Something wrong happened'))
+            return done(null, false, req.flash('error', '  حدث خطا ما'))
         } 
         if(!user) {
             
             
-            return done(null, false, req.flash('error', 'user was not found'))
+            return done(null, false, req.flash('error', '   المستخدم غير موجود'))
 
           
         }
@@ -129,7 +129,7 @@ passport.use( 'local.login_manger' , new localStrategy({
                 return done(null,user)
 
             } else {
-                return done(null,false, req.flash('error', ' password is wrong'))
+                return done(null,false, req.flash('error', '   كلمة السر خطا'))
 
             }
         }
