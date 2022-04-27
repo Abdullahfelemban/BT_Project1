@@ -25,6 +25,12 @@ const coupon = new mongoose.Schema({
          
           type: Date
         },
+
+        end:{
+
+     type:Number
+     
+        },
         user:{
 
           type: mongoose.Schema.Types.ObjectId,
