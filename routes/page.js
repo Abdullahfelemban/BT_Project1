@@ -190,7 +190,7 @@ router.route('/icons').get(function (req, res) {
   
 
 
-  router.get("/view/:pageid", (req, res) => {
+  router.get("/:pageid", (req, res) => {
     let  quary  = {_id:req.params.pageid};
    
     page.findOne(quary , (err,findpage)=> {
