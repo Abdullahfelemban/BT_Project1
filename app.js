@@ -64,6 +64,10 @@ app.get('/', (req,res)=> {
 
  app.use('/pageForm', page)
 
+const pageuser = require('./routes/page')
+
+ app.use('/', pageuser)
+
  const QRcode = require('./routes/QRcode')
 
  app.use('/QRcode', QRcode)
