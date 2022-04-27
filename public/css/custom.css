@@ -349,26 +349,40 @@ text-align: center;
    -o-transform:rotate(-90deg);
    -webkit-transform:rotate(-90deg);
 }
+
+#table1{
+
+  width: 700px;
+  text-align: right;
+
+}
 #img01{
 
   width:600px;
 }
 
 #img02{
- width: 600px;
+ width: 400px;
   
 }
 #img03{
 
-  width: 600px;
+  width: 400px;
 }
 #img04{
 
   width: 400px;
 }
-
-
 @media (max-width: 500px) {
+
+
+  #table1{
+
+    width: 400px;
+    text-align: right;
+  
+  }
+
     .logo{
 
         width: 250px;
@@ -390,27 +404,23 @@ text-align: center;
         width:100px;
     }
     
- #img01{
+    #img01{
 
       width:300px;
     }
     #img02{
       
-      width: 450px;
+      width: 320px;
+      
       
     }
     #img03{
 
-      width: 450px;
+      width: 320px;
     }
     #img04{
 
-      width: 300px;
+      width: 320px;
     }
-
  }
 
-
-
-
- 
