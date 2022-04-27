@@ -132,7 +132,7 @@ var h = `<center> <p style="color:green;">  تم حفظ تصميمك بنجاح 
      <button style="width:180px;height:40px;cursor:pointer;background-color:${req.body.themcolor};font-size:20px;border-radius:10%;color:${req.body.fontcolor};"> ${req.body.actionbutton}</button></a> </div> 
   
      
-     <div style="background-color:${req.body.themcolor}; width: 50%;height: 190px;margin-top: 100px;">
+     <div style="background-color:${req.body.themcolor}; width: 100%;height: 190px;margin-top: 100px;">
   <br>
       <div style="text-align: center;"> 
  
@@ -340,7 +340,7 @@ name: 'adsimg', maxCount: 1
      <button style="width:180px;height:40px;cursor:pointer;background-color:${req.body.themcolor};font-size:20px;border-radius:10%;color:${req.body.fontcolor};"> ${req.body.actionbutton}</button></a> </div> 
   
      
-     <div style="background-color:${req.body.themcolor}; width: 50%;height: 190px;margin-top: 100px;">
+     <div style="background-color:${req.body.themcolor}; width: 100%;height: 190px;margin-top: 100px;">
   <br>
       <div style="text-align: center;"> 
  
