@@ -43,7 +43,7 @@ axios.get('/customer/show')
   
   const container = document.getElementById('customer');
  
-  var content= ` <table class="table" style="width: 700px; text-align: right;">  <thead > 
+  var content= ` <table class="table" id="table1" >  <thead > 
      <tr> 
         <th>الاسم</th> 
         <th>التصنيف</th> 
