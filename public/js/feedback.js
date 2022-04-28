@@ -32,5 +32,4 @@ axios.get('/main_page/feedback')
   content+=`<h4 style="text-align: right;">متوسط التقيم: ${sum/feedback.length}</h4>`;
     container.innerHTML += content;
    
-
 })
