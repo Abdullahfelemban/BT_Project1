@@ -120,11 +120,11 @@ var h = `<center> <p style="color:green;">  تم حفظ تصميمك بنجاح 
   <center>
  
   
-    <div > <a href="${req.body.logolink}" ><img src="${'http://businesstools.online/'+upImg1}" width="200px"  ></a> </div> 
+    <div > <a href="${req.body.logolink}" ><img src="https://businesstools.online/${upImg1}" width="200px"  ></a> </div> 
   
     
   
-     <div> <img src="${'http://businesstools.online/'+upImg2}" width="50%" style="margin-top: 50px;" ></div>
+     <div> <img src="https://businesstools.online/${upImg2}" width="50%" style="margin-top: 50px;" ></div>
   
      <div style="text-align: center; margin-top: 50px;" > <a href="${req.body.buttonlink}"> 
      
@@ -328,11 +328,11 @@ name: 'adsimg', maxCount: 1
   <center>
  
    
-    <div > <a href="${req.body.logolink}" ><img src="${'http://businesstools.online/'+upImg1}" width="200px"  ></a> </div> 
+    <div > <a href="${req.body.logolink}" ><img src="https://businesstools.online/${upImg1}" width="200px"  ></a> </div> 
   
     
   
-     <div> <img src="${'http://businesstools.online/'+upImg2}" width="50%" style="margin-top: 50px;" ></div>
+     <div> <img src="https://businesstools.online/${upImg2}" width="50%" style="margin-top: 50px;" ></div>
   
      <div style="text-align: center; margin-top: 50px;" > <a href="${req.body.buttonlink}"> 
      
