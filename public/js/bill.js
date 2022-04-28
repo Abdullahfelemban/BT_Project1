@@ -108,8 +108,3 @@ function publish3(id){
      
     });
   
-  
-    
-    
-  
-      
