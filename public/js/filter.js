@@ -1,4 +1,3 @@
-
 function deletef(id){
 
     axios.delete('/customer/delete/'+id)
@@ -105,17 +104,18 @@ content3+= `<select name="to"  multiple> `
     filter.forEach((filter)=> {
 
    
-    if(filter._id!='62501ecde4825a564ed12f20'){
+   
         
         content3+= ` <option  value="${filter._id}"> ${filter.name} </option>  `;
       
-    }
+    
       })
       
       content3+=  ` </select>  `
         container3.innerHTML += content3;
 
 })
+
 
 
 
