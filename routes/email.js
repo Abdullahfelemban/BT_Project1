@@ -39,18 +39,7 @@ router.get('/email',isAuthenticated,(req,res)=> {
 })
 
 
-router.get('/userpage',isAuthenticated,(req,res)=> {
-    
-   
-       
 
-  res.render('pageForm/userpage')
-    
-
- 
-
-
-})
 
 router.get('/editor',isAuthenticated,(req,res)=> {
     
@@ -194,7 +183,7 @@ router.post('/publish', (req,res)=> {
 let quary = {_id:req.body.ad}
 
 
-customer.find({filter:req.body.to }, (err,findcustomer)=> {
+customer.find( {$and: [{filter:req.body.to },{user:req.user.id}]}, (err,findcustomer)=> {
 
   console.log(findcustomer)
   
@@ -223,7 +212,7 @@ var mailOptions = {
 
 transporter.sendMail(mailOptions, function(error, info){
   if (error) {
-
+console.log(error)
     req.flash('info','')
     req.flash('info1','خطا، لم يتم ارسال البريد تاكد من المعومات المدخلة')
     res.render('emailForm/publish' ,{
