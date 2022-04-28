@@ -117,5 +117,5 @@ QRcode.forEach((QRcode1)=> {
     container.innerHTML += content;
 
    
-   
+  
   });
