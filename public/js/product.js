@@ -33,7 +33,7 @@ product.forEach((product1)=> {
       }
       // add content
       
-     
+   
       content += `<div class="card" >
      
   
@@ -41,12 +41,12 @@ product.forEach((product1)=> {
           <div class="card-body">
     
          
-          <img src="${product1.img}" width="200px"> 
+          <img src="/${product1.img}" width="200px"> 
           
 
           <div style="text-align: right;position: absolute;bottom: 50px;margin-top: 50px ;" >
           <div style="background-color: white;" >اسم المنتج: ${product1.name}  </div>
-          <div style="background-color: white;">رقم المنتج: ${product1.number}  </div>
+          <div style="background-color: white;">رقم المنتج: ${String(product1.number).replace(String(product1.user),'')}  </div>
           <div style="background-color: white;">سعر المنتج: ${product1.price}  </div>
         </div>
 
