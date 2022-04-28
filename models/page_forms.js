@@ -24,8 +24,9 @@ const pageSchema = new mongoose.Schema({
       type: String
     },
     name:{
-
-        type: String
+        
+        type: String,
+        unique:true
       },
       view:{
 
