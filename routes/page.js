@@ -190,31 +190,7 @@ router.route('/icons').get(function (req, res) {
   
 
 
-  router.get("/:pageid", (req, res) => {
-    let  quary  = {_id:req.params.pageid};
-   
-    page.findOne(quary , (err,findpage)=> {
-
-      if(findpage){
-
-        page.updateOne(quary ,{view: findpage.view+1} , (err)=>{
-
-console.log(err)
-        })
-
-
-
-      }
-           
-       
-   
-   return res.send(findpage.html_code)
-    
-   
-    }) 
-
-    
-});
+  
 
 
 router.post('/email/:email/:user', (req,res)=> {
@@ -253,6 +229,100 @@ console.log(req.params.email)
 })
   
 
+router.get('/userpage',isAuthenticated,(req,res)=> {
+    
+ 
+
+  res.render('pageForm/userpage', {
+
+  
+    message1: req.flash('info1'),
+    message: req.flash('info'),
+    link:""
+      })
+    
+
+ 
+
+
+})
+
+router.post('/userpage', (req,res)=> {
+        
+  console.log(req.body.id2)
+  console.log(req.body.name)     
+   
+  page.findOne({name:req.body.name}, (err,name)=> {
+
+
+if(!name){
+  page.updateOne({_id:req.body.id2} ,{
+       
+    name:req.body.name,
+
+  }
+  
+  , (err) =>{
+
+if(err){
+
+
+  req.flash('info1','عفوا يوجد خطا ما   ')
+  req.flash('info',' ')
+  redirect('pageForm/userpage', {
+
+  
+  message1: req.flash('info1'),
+  message: req.flash('info'),
+  link:""
+    })
+
+
+}else{
+
+
+  req.flash('info1','')
+  req.flash('info','   تم انشاء صفحتك بنجاح على الرابط')
+  res.render('pageForm/userpage', {
+
+  
+  message1: req.flash('info1'),
+  message: req.flash('info'),
+  link:"https://businesstools.online/"+req.body.name
+    })
+      
+
+}
+
+})
+  
+
+
+
+}else{
+
+ 
+  req.flash('info1',' عنوان الصفحة محجوز مسبقا')
+  req.flash('info',' ')
+  res.render('pageForm/userpage', {
+
+  
+  message1: req.flash('info1'),
+  message: req.flash('info'),
+  link:""
+    })
+      
+
+
+}
+
+
+
+  })
+ 
+ 
+ 
+  })
 
 
 
