@@ -66,7 +66,7 @@ axios.get('/customer/show')
   
   
   })
-  content+="</table>";
+  content+="</table> ";
 
     container.innerHTML += content;
    
