@@ -154,6 +154,8 @@ router.post('/linkuploads',isAuthenticated, upload.fields([{
     
       <p style="color:${req.body.fontcolor}; font-size:32px">${req.body.dis} </p> <br> `
 
+
+      console.log(typeof req.body.linkadd)
      
       icons = new pageform ({
 
@@ -181,10 +183,10 @@ router.post('/linkuploads',isAuthenticated, upload.fields([{
             img:upImg2 ,
           })
 
-          links.save(function(err, links){
-            icons.link.push(links);
-            icons.save();
-        }) 
+          links.save()
+          icons.link.push(links);
+           
+         
         response += `   <div > <button type="button"  onclick="location.href='${req.body.link}';" style="color:${req.body.fontcolor}; width: 600px;height: 80px;border-radius: 50px;background-color: ${req.body.themcolor};text-align: right;" >
         <img src="/${upImg2}" AlIGN="left" style="display:inline;margin-left: 20px;" width="70px"> 
         <span  style="font-size: 40px;display:inline;margin-right: 20px;" >${req.body.linkadd}</span></button></div><br>
