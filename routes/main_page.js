@@ -24,7 +24,9 @@ isAuthenticatedmanger = (req,res,next) => {
 
 router.get('/user',isAuthenticated,(req,res)=> {
     
-    coupon.findOne({user:req.user.id}, (err,coup) => {
+  
+
+    coupon.findOne({$and:[{user:req.user.id},{end:0}]}, (err,coup) => {
 
   if (coup) {
          
@@ -33,8 +35,8 @@ if(new Date().getTime()>coup.enddate.getTime()){
 
     User.updateOne({_id:req.user.id} ,{
 
-
-        grade:0
+        grade:0,
+       
   
       } , (err) =>{
   
@@ -44,13 +46,32 @@ if(new Date().getTime()>coup.enddate.getTime()){
          console.log(err)
          res.render('main_page/user')
         }else{
+        
+            coupon.updateOne({user:req.user.id} ,{
 
-         res.render('main_page/user') 
+                end:1,
+               
+          
+              } , (err) =>{
+          
+                if(err){
+              
+                   
+                 console.log(err)
+                 res.render('main_page/user')
+                }else{
+                
+                 res.render('main_page/user') 
+                }
+        
+            })
+
+         
         }
 
     })
 
-     
+      
 
 
 }else{
@@ -144,7 +165,8 @@ router.get('/feedback',(req,res)=> {
     let coupon1 = new coupon ({
 
         createdate: new Date() ,   
-        used: 0
+        used: 0,
+        end:0
         
 
       })
