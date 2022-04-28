@@ -1,12 +1,11 @@
-
 function publish(id){
  
 
-    
+ 
 
-    window.localStorage.setItem('userpage',' https://businesstools.online/'+id);
+    window.localStorage.setItem('userpage',id);
     
-    window.location.href="/emailForm/userpage"
+    window.location.href="/pageForm/userpage"
   
    
   
@@ -54,17 +53,18 @@ pageform.forEach((pageform)=> {
       content += `<div class="card" >
      
   
-        <div id="collapse-${id}" class="collapse show" aria-labelledby="heading-${id}" data-parent="#accordion">
-          <div class="card-body">
+        <div id="collapse-${id}"  class="collapse show" aria-labelledby="heading-${id}" data-parent="#accordion">
+          <div class="card-body" >
     
           ${pageform.icons}
             
           </div>
           <br><br>
-        <h3 style="position: absolute;bottom: 35px;right: 20px;" >  <i class="bi bi-eye"></i> ${pageform.view}  </h3>
+        <h3 style="position: absolute;bottom: 35px;right: 20px;margin-bottom:20px;" >  <i class="bi bi-eye"></i> ${pageform.view}  </h3>
+        <a style="position: absolute;bottom: 36px;right: 20px;" href="https://businesstools.online/${pageform.name}">  https://businesstools.online/${pageform.name}  </a> 
         </div>
-  
-        <div class="card-header" style="position:absolute;bottom: 0px;" id="heading-${id}">
+       
+        <div class="card-header" style="position:absolute;bottom:0px;" id="heading-${id}">
         <h5 class="mb-0"> 
           <button onclick="update_click(this.id)" id="${pageform._id}" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#collapse-${id}" aria-expanded="true" aria-controls="collapse-${id}">   تعديل </button>
           <button  onclick="delete_click(this.id)" id="${pageform._id}"  class="btn btn-danger btn-lg" data-toggle="collapse" data-target="#collapse-${id}" aria-expanded="true" aria-controls="collapse-${id}">  حذف </button>
