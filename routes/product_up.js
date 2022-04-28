@@ -40,17 +40,17 @@ router.post('/product_up',isAuthenticated, upload.fields([{
   if (typeof req.files.img === "undefined") {
 
    
-  upImg1 = "http://businesstools.online/uploads/noimg.png"
+  upImg1 = "uploads/noimg.png"
  
 
   } else{
-    upImg1= 'http://businesstools.online/'+req.files.img[0].path;
+    upImg1= req.files.img[0].path;
     
    
   }
 
   
-  product.findOne({number: req.body.num  }, (err,product1)=> {
+  product.findOne({number: req.user.id+req.body.num  }, (err,product1)=> {
 
 
 if(product1){
@@ -69,7 +69,7 @@ if(product1){
   let product1 = new product ({
     
    img:upImg1 ,
-   number: req.body.num,
+   number: req.user.id+req.body.num,
    name:req.body.name,
    price:req.body.price,
    user:req.user._id
@@ -141,7 +141,7 @@ router.post('/product_up2',isAuthenticated,  upload.fields([{
    
   
     } else{
-      upImg1= 'http://businesstools.online/'+req.files.img[0].path;
+      upImg1= req.files.img[0].path;
       
      
     }
@@ -157,7 +157,7 @@ router.post('/product_up2',isAuthenticated,  upload.fields([{
   
         
   
-        product.updateOne(findproduct ,{img:upImg1,number:req.body.num,name:req.body.name,price:req.body.price}, (err) =>{
+        product.updateOne(findproduct ,{img:upImg1,number: req.user.id+req.body.num,name:req.body.name,price:req.body.price}, (err) =>{
          
          if(!err){
        
@@ -218,7 +218,7 @@ router.post('/product_up2',isAuthenticated,  upload.fields([{
     product.findOne({_id : req.params.pr_id} , (err,findproduct)=> {
   
        img = findproduct.img ;
-       number = findproduct.number;
+       number = String(findproduct.number).replace(String(findproduct.user),'');
        namep =findproduct.name ;
        price= findproduct.price;
     })
