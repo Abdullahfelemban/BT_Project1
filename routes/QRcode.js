@@ -207,7 +207,7 @@ router.get("/publish/:QRid", (req, res) => {
        
    
    
- 
+
    
     }) 
 
