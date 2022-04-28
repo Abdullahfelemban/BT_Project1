@@ -2,8 +2,8 @@ var i=1;
 var y=0;
 function add(){   
 
-  i++
   
+    i++
   if(i<4){
         var node = document.createElement('div');        
         node.innerHTML = '<span class="input-group mb-3" > <span class="input-group-text">الرابط ' + i + '</span> <input type="text" placeholder="https://example.com" class="form-control" name="s'+i+'"    ><span> <select class="form-select" name="sm'+i+'" aria-label="Default select example">' + `  <option selected>اختر نوع الرابط</option>
@@ -12,7 +12,9 @@ function add(){
         <option value="3">فيس بوك</option>
       </select>
     </span>
-</span> `;   
+</span> `;  
+
+
   }
 
        if(i==3){
@@ -70,15 +72,16 @@ function add(){
           
           let page = responseArr.data;
         
-          const container = document.getElementById('container2');
+          const container = document.getElementById('container3');
           
           var  content ;
          
-          
+          console.log(page[0].link)
          
-          content = ` 
-              `  ;
-            
+          content = ` `  ;
+
+
+ 
 
 for(i=0;i<page[0].link.length;i++){
             
@@ -103,7 +106,7 @@ for(i=0;i<page[0].link.length;i++){
        
         </div>
         `  ;
-  
+
 }
       
           container.innerHTML = content;
