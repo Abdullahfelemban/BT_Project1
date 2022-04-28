@@ -63,8 +63,8 @@ app.get('/', (req,res)=> {
  const page = require('./routes/page')
 
  app.use('/pageForm', page)
-
-const pageuser = require('./routes/page')
+ 
+ const pageuser = require('./routes/userpage')
 
  app.use('/', pageuser)
 
