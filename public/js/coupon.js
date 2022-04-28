@@ -1,5 +1,3 @@
-
-
 axios.get('/main_page/coupon2')
 .then((responseArr ) => {
   
@@ -60,3 +58,4 @@ var use,start,end ;
    
 
 })
+
