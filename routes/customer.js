@@ -187,7 +187,7 @@ router.post('/filter', (req,res)=> {
       
       
       
-        filter.find( { $or: [{user:req.user.id}, {user:'6251f37449f2ecee295ccc7d'}] })
+        filter.find( { $or: [{user:req.user.id}, {user:null}] })
       
         .exec(function (err,filter) {
           if (err) {
