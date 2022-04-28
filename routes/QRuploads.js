@@ -83,7 +83,7 @@ var h = `<center> <p style="color:green;">  تم حفظ تصميمك بنجاح 
   
   <center>
  <br><br>
-  <img style="margin-top: 50px;" src="https://chart.googleapis.com/chart?cht=qr&chl=http://localhost:1600/QRcode/view/${QR.id}&chs=400x400&chld=L|0"	class="qr-code img-thumbnail img-responsive" />
+  <img style="margin-top: 50px;" src="https://chart.googleapis.com/chart?cht=qr&chl=https://businesstools.online/QRcode/view/${QR.id}&chs=400x400&chld=L|0"	class="qr-code img-thumbnail img-responsive" />
   <div  class="img">
   <label style="position: absolute;top: 260px;left: 920px;">
       <img src="/${upImg1}" width="80px">
@@ -111,7 +111,7 @@ var icon =  `
 <center>
 
 <br>
-<div><img src="https://chart.googleapis.com/chart?cht=qr&chl=http://localhost:1600/QRcode/view/${QR.id}&chs=200x200&chld=L|0" />
+<div><img src="https://chart.googleapis.com/chart?cht=qr&chl=https://businesstools.online/QRcode/view/${QR.id}&chs=200x200&chld=L|0" />
 
  <img src="/${upImg1}" width="60px"  style="position: absolute;top:120px;right:115px;"/> </div>
 
@@ -179,7 +179,7 @@ router.post('/QRuploads2',isAuthenticated,  upload.fields([{
   
   <center>
  <br><br>
-  <img style="margin-top: 50px;" src="https://chart.googleapis.com/chart?cht=qr&chl=http://localhost:1600/QRcode/view/${QRcodeid}&chs=400x400&chld=L|0"	class="qr-code img-thumbnail img-responsive" />
+  <img style="margin-top: 50px;" src="https://chart.googleapis.com/chart?cht=qr&chl=https://businesstools.online/QRcode/view/${QRcodeid}&chs=400x400&chld=L|0"	class="qr-code img-thumbnail img-responsive" />
   <div  class="img">
   <label style="position: absolute;top: 260px;left: 920px;">
       <img src="/${upImg1}" width="80px">
@@ -207,7 +207,7 @@ var icon =  `
 <center>
 
 <br>
-<div><img src="https://chart.googleapis.com/chart?cht=qr&chl=http://localhost:1600/QRcode/view/${QRcodeid}&chs=200x200&chld=L|0" />
+<div><img src="https://chart.googleapis.com/chart?cht=qr&chl=https://businesstools.online/QRcode/view/${QRcodeid}&chs=200x200&chld=L|0" />
 
  <img src="/${upImg1}" width="60px"  style="position: absolute;top:120px;right:115px;"/> </div>
 
@@ -292,6 +292,5 @@ var icon =  `
       
   })
   
-
 
 module.exports= router
