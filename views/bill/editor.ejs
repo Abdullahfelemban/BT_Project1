@@ -110,7 +110,7 @@ content3+= `<span> المنتج : ${p+1}</span> <span> الكمية <input type=
    
     
         
-        content3+= ` <option  value="${product1.number}"> ${product1.number} </option>  `;
+        content3+= ` <option  value="${product1.number}"> ${String(product1.number).replace(String(product1.user),'')} </option>  `;
       
       
       })
