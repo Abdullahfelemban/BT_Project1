@@ -5,26 +5,57 @@
 
 <center>
     
+  <form  style="margin-top: 100px;" method="post"  >
+ 
+    <label for="basic-url" class="form-label"   ><h3>عنوان رابط الصفحة</h3></label>
 
-  <h3 style="color: green;margin-top: 50px;" >تم انشاء صفحتك بنجاح على الرابط</h3>  
-   <h3 id="page5">     </h3>
 
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon3">https://businesstools.online/</span>
+  <input type="text" class="form-control" name="name" aria-describedby="basic-addon3">
+ <div id="id"></div>
+</div><br>
+
+<button type="submit"  class="btn btn-success">ارسل</button>
+</form>
+   <h3 id="page5"> </h3>
+
+   <br>
+   <div>  <% if(message) {%><p style="color: green;font-size: 16px;text-align: center;"><%= message %></p>  <%}%>
+       <% if(message1) {%><p style="color: red;font-size: 16px;text-align: center;"><%= message1 %></p>  <%}%><br/><br/>
+       
+        <a style="font-size: 20px;" href="<%= link %>">  <%= link %>  </a>
 </center>
 
 
 <script>
 
 
-    const container1= document.getElementById('page5');
+
+
+        const container1 =  document.getElementById('id');
         var page = window.localStorage.getItem('userpage');
+        
        
-        console.log(page)
+        
+        container1.innerHTML=`<input type="hidden" value="${page}" name="id2" >`
+
+        
     
-    
+        
+  
       
-       container1.innerHTML=   '<a  href="'+page+'">  '+page+'  </a>';
+        
+
+
+                   
+     
+    
+     
+
+      
        
-       
+      
        
        
        
