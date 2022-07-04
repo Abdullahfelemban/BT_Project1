@@ -18,7 +18,7 @@
 <li > Back End: Node.js, Express.js, MongoDB</li>
 <li > Embedded JavaScript</li>
 
- <h1> المكتبات المستخدمة في البرنامج:  </h1>
+ <h1> المكتبات المستخدمة في الموقع:  </h1>
 <div dir="rtl">
 <li > <B>Passport:</B> تم استخدامه بأنشاء تسجيل مستخدم جديد و تسجيل الدخول و تسجيل خروج المستخدم.</li>
 <li ><B> Multer:</B> تم استخدامه في حفظ الصور على الخادم.</li>
